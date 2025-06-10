@@ -8,10 +8,11 @@ public class Soma {
     Scanner sc = new Scanner(System.in);
     
     public Double somar(){
-        System.out.println("Some quantos números desejar! para encerrar a soma, digite 'Q'");
+        System.out.println("Some quantos números desejar!");
         
         while (true) {
-            entrada = sc.next();
+            System.out.print("Número (ou Q para encerrar): ");
+            entrada = sc.next().trim();
             if (entrada.equalsIgnoreCase("Q")) {
                 break;
             }

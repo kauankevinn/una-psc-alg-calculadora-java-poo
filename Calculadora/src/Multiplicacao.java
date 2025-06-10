@@ -8,10 +8,11 @@ public class Multiplicacao {
     Scanner sc = new Scanner(System.in);
     
     public Double multiplicar(){
-        System.out.println("Multiplique quantos números desejar! para encerrar a multiplicação, digite 'Q'");
+        System.out.println("Multiplique quantos números desejar! ");
 
         while (true) {
-            entrada = sc.next();
+            System.out.print("Número (ou Q para encerrar): ");
+            entrada = sc.next().trim();
             if (entrada.equalsIgnoreCase("Q")) {
                 break;
             }

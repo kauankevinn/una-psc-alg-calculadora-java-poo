@@ -39,6 +39,7 @@ public class Main {
                     continue;
             }
             sc.close();
+            break;
             } 
     }
 }

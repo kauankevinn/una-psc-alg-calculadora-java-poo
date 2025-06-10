@@ -10,12 +10,12 @@ public class Divisao {
         System.out.println("Divida quantos números desejar! para encerrar a divisão, digite 'Q'");
 
         while (true) {
-            System.out.println("Digite o dividendo");
-            String resposta1 = sc.nextLine();
+            System.out.print("Dividendo (ou Q para encerrar):  ");
+            String resposta1 = sc.next().trim();
             if (resposta1.equalsIgnoreCase("Q")) break;
 
-            System.out.println("Digite o divisor");
-            String resposta2 = sc.nextLine();
+            System.out.print("Divisor (ou Q para encerrar): ");
+            String resposta2 = sc.next().trim();
             if(resposta2.equalsIgnoreCase("Q")) break;
 
             double dividendo = Double.parseDouble(resposta1);

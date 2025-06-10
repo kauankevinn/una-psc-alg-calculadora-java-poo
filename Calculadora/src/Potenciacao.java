@@ -2,27 +2,33 @@ import java.util.Scanner;
 
 public class Potenciacao {
     double numero;
+    double resultado;
     double subtracao = 0;
 
     Scanner sc = new Scanner(System.in);
     
     public Double potenciar(){
-        System.out.println("Subtraia quantos números desejar! para encerrar a potência, digite 0");
 
-        subtracao = sc.nextDouble();
-        
+        // Math.pow(subtracao, subtracao);
+        System.out.println("Descubra a potência dos números!");
+
         while (true) {
-            numero = sc.nextDouble();
-            
-            if (numero == 0) {
-                break;
-            }
+            System.out.println("Digite o número base (ou Q para encerrar): ");
+            String resposta1 = sc.next().trim();
+            if (resposta1.equalsIgnoreCase("Q")) break;
 
-            subtracao -= numero;
+            System.out.println("Digite o expoente (ou Q para encerrar): ");
+            String resposta2 = sc.next().trim();
+            if(resposta2.equalsIgnoreCase("Q")) break;
+
+            double base = Double.parseDouble(resposta1);
+            double expoente = Double.parseDouble(resposta2);
+
+            resultado = Math.pow(base, expoente);
+
+            System.out.println(resultado);
         }
-
-        System.out.println(subtracao);
         
-        return subtracao;
+        return resultado;
     }
 }

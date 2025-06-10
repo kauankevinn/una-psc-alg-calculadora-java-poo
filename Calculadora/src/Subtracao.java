@@ -1,30 +1,36 @@
 import java.util.Scanner;
 
 public class Subtracao {
-    String entrada;
-    double numero;
-    double subtracao = 0;
+    double subtracao;
 
     Scanner sc = new Scanner(System.in);
     
     public Double subtrair(){
-        System.out.println("Subtraia quantos números desejar! para encerrar a subtração, digite 'Q'");
-
-        subtracao = sc.nextDouble();
-
+        System.out.println("Subtraia quantos números desejar!");
+        
         while (true) {
-            entrada = sc.next();
-            numero = Double.parseDouble(entrada);
-            
-            if (entrada.equalsIgnoreCase("Q")) {
+            System.out.print("Digite o minuendo (ou Q para encerrar): ");
+            String resposta1 = sc.next().trim();
+
+            if (resposta1.equalsIgnoreCase("Q")) {
                 break;
             }
 
-            subtracao -= numero;
-        }
+            double minuendo = Double.parseDouble(resposta1);
 
-        System.out.println(subtracao);
-        
+            System.out.print("Subtraendo (ou Q para encerrar): ");
+            String resposta2 = sc.next().trim();
+            
+            if (resposta2.equalsIgnoreCase("Q")) {
+                break;
+            }
+
+            double subtraendo = Double.parseDouble(resposta2);
+
+            subtracao = minuendo-subtraendo;
+
+            System.out.println(subtracao);
+        }
         return subtracao;
     }
 }
